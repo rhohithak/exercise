@@ -1,0 +1,19 @@
+anme: project-2
+on: push
+jobs: 
+    build-test:
+      runs-on: ubuntu-latest
+      steps:
+        - name: get the code 
+          uses: actions/checkout@v2
+        - name: install dependencies
+          run: npm ci
+        - name: run lint
+          run: npm run lint 
+        - name: run test
+          run: npm run test
+        - name: run build
+          run: npm run build 
+        - name: deployment 
+          run: echo "deploying ...."
+          
