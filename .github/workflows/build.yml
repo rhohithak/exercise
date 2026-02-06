@@ -1,4 +1,4 @@
-anme: project-2
+name: project-2
 on: push
 jobs: 
     build-test:
@@ -16,4 +16,3 @@ jobs:
           run: npm run build 
         - name: deployment 
           run: echo "deploying ...."
-          
